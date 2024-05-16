@@ -46,7 +46,6 @@
   <div id="video-container">
     <video id="bg-video" autoplay loop muted>
       <source src="나이키러닝.mp4" type="video/mp4">
-      Your browser does not support the video tag.
     </video>
   </div>
   <script src="index.js">
@@ -58,7 +57,7 @@
       // 마우스 커서가 이미지 위에 올라갔을 때 이미지 변경
       this.src = '나이키(검).png'; // 새로운 로고 이미지 경로
     // 배경 비디오 숨기기
-    document.getElementById('video-container').style.display = 'none';
+      document.getElementById('video-container').style.display = 'none';
     });
 
     // 마우스 커서가 이미지 위에서 벗어났을 때 이벤트 리스너 추가
