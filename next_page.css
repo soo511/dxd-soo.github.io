@@ -1,71 +1,673 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 
-header {
-    background-color: #ffffff; /* 상단바 색깔 변경 */
-    color: rgb(255, 255, 255);
-    width: 100%;
-    height: 50px; /* 상단 메뉴바 높이 */
+.header {
+    width: 1920px; 
+    height: 100px;
+    top: 0px;
+    left: 0px;
+}
+.container {
     display: flex;
-    align-items: center;
-    position: fixed; /* 스크롤 시에도 상단에 고정 */
-    top: 0;
-    z-index: 1000;
-    padding: 0 20px; /* 좌우 패딩 추가 */
-    box-sizing: border-box; /* 패딩 포함하여 박스 크기 계산 */
+    align-items: center; /* Flex 아이템들을 수직 가운데 정렬 */
+    justify-content: space-between; /* 컨테이너 내에서 공간을 균등하게 분배 */
+    padding: 0px; /* 상자의 패딩 */
+    margin: 0 auto; /* 상자를 가운데 정렬 */
 }
-
-nav {
-    width: 100%;
-    max-width: 1920px; /* 화면 크기 1920px에 맞추기 */
-    display: flex;
-    justify-content: center; /* 로고와 메뉴 사이에 공간 생성 */
-    align-items: center; /* 수직 정렬 */
-    padding: 0 20px; /* 좌우 여백 */
-}
-
 
 .logo {
     flex-shrink: 0; /* 로고 크기 고정 */
-    width: auto; /* 가로 비율을 유지하며 자동 조정 */
-    height: 100%; /* 로고 이미지 높이 조정 */
-    max-height: 20px; /* 상단바 높이에 맞추기 */
+    width: 103px; 
+    height: auto; /* 로고 이미지 높이 조정 */
     object-fit: contain; /* 이미지 비율 유지 */
-    padding: 0 10px; /* 좌우 패딩 추가 */
-    margin-right: auto; /* 메뉴를 화면 우측에 정렬 */
+    margin-top: 10px;
+    margin-left: 50px;
 }
 
-.logo-container {
-    margin-right: auto; /* 로고와 메뉴 사이의 간격 조절 */
-}
-
-
-ul.menu {
-    list-style: none;
-    padding: 0;
+.menu {
     display: flex;
-    margin-left: auto;
+    justify-content: center; /* 메뉴를 가로로 가운데 정렬 */
+    margin-top: 20px;
+    margin-left: 105px;
 }
 
-ul.menu li {
-    margin: 0 15px;
+.menu ul {
+    list-style: none;
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0 25px;
     text-align: center; /* 각 목록 항목의 텍스트를 가운데 정렬 */
-}
+    width: 150px; 
+    height: 27px; 
+    font-size: 15px;
+} 
 
-ul.menu li a {
+.menu a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-size: 13px;
-    padding: 0 20px;
 }
 
-ul.menu li a:hover {
-    background-color: #ffffff; /* hover 상태에서 배경색 변경 */
-    border-radius: 4px;
+
+.icons img {
+    margin-top: 20px;
+    width: 70px; /* 아이콘의 너비 -> 아이콘 크기 */
+    height: auto; /* 아이콘의 높이 -> 아이콘 크기 */
+    margin-left: 10px; /* 아이콘 사이의 간격 */
+}
+
+.icon3 {
+    margin-right: 80px;
+}
+
+.main {
+    width: 1668px; 
+    height: 890px; 
+    margin-left: 128px;
+}
+
+.main-img {
+    width: 1668px; 
+    height: auto;
+    text-align: center; /* 가로 중앙 정렬 */
+}
+
+.main-text {
+    position: absolute; /* 텍스트를 절대 위치로 설정 */
+    top: 130px; 
+    left: 180px; 
+    color: white; /* 텍스트 색상 */
+    font-size: 115px;
+    font-weight: bold; /* 텍스트 두께 */
+    text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7); 
+}
+
+.style1 {
+    width: 1920px;
+    height: 1230px;
+    top: 2698px;
+    left: 128px;
+    margin-top: 780px;
+}
+
+.style1-img {
+    position: absolute;
+    position: relative;
+    width: 796px; 
+    height: auto;
+    margin-left: 128px;
+}
+
+.style1-text h2 {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 80px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    margin-top: -425px;
+    left: 1020px;
+    width: 700px; 
+    height: 150px; 
+
+}
+
+.style1-text  p {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 36px;
+    margin-top: -280px;
+    left: 900px;
+    margin-left: 128px;
+    width: 800px; 
+    height: 150px; 
+}
+
+.button-with-square {
+    position: absolute;
+    display: inline-flex;
+    width: 200px;
+    height: 76px;
+    padding: 22px 25px;
+    font-size: 28px; 
+    color: #ffffff;
+    background-color: rgb(14, 14, 14); 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: -120px;
+    left: 900px;
+    margin-left: 128px;
+}
+
+.button-with-square .square {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(14, 14, 14); 
+}
+
+.airmax {
+    width: 1920px;
+    height: 1230px;
+    top: 3105px;
+    left: 0px;
+    margin-top: 700px;
+}
+
+.airmax-text h2 {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 80px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 570px;
+    width: 1000px; 
+    height: 150px; 
+}
+
+.airmax-img {
+    position: absolute;
+    position: relative;
+    width: 1505px; 
+    height: auto;
+    margin-top: 210px;
+    left: -8px;
+}
+
+/*샵*/
+
+.shop{
+    width: 1920px;
+    height: 1096px;
+    top: 4384px;
+    left: 0px;
+    margin-top: 700px;
+}
+
+.shop-text h2 {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 60px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 132px;
+    width: 500px; 
+    height: 100px; 
+}
+
+.shop1-img {
+    position: absolute;
+    position: relative;
+    width: 540px; 
+    height: auto;
+    margin-top: 215px;
+    left: 128px;
+}
+
+.shop1-text h2 {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 46px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 132px;
+    width: 500px; 
+    height: 100px;
+    top: 6405px;
+}
+
+.shop1-text p {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 28px;
+    margin-top: 125px;
+    left: 132px;
+    width: 600px; 
+    height: 150px;
+    top: 6400px;
+}
+
+.button-with-square2 {
+    position: absolute;
+    display: inline-flex;
+    width: 178px;
+    height: 76px;
+    padding: 22px 38px;
+    font-size: 28px; 
+    color: #ffffff;
+    background-color: rgb(14, 14, 14); 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: -120px;
+    left: 132px;
+}
+
+.button-with-square2 .square {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(14, 14, 14); 
+}
+
+.shop2-img {
+    position: absolute;
+    position: relative;
+    width: 540px; 
+    height: auto;
+    left: 150px;
+}
+
+.shop2-text h2 {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 46px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 703px;
+    width: 500px; 
+    height: 100px;
+    top: 6405px;
+}
+
+.shop2-text p {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 28px;
+    margin-top: 125px;
+    left: 703px;
+    width: 600px; 
+    height: 150px; 
+    top: 6400px;
+}
+
+.button-with-square3 {
+    position: absolute;
+    display: inline-flex;
+    width: 178px;
+    height: 76px;
+    padding: 22px 38px;
+    font-size: 28px; 
+    color: #ffffff;
+    background-color: rgb(14, 14, 14); 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: -120px;
+    left: 703px;
+}
+
+.button-with-square3 .square {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(14, 14, 14); 
+}
+
+.shop3-img {
+    position: absolute;
+    position: relative;
+    width: 540px; 
+    height: auto;
+    margin-top: 215px;
+    left: 171px;
+}
+
+.shop3-text h2 {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 46px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 1274px;
+    width: 500px; 
+    height: 100px;
+    top: 6405px;
+}
+
+.shop3-text p {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 28px;
+    margin-top: 125px;
+    left: 1274px;
+    width: 600px; 
+    height: 150px; 
+    top: 6400px;
+}
+
+.button-with-square4 {
+    position: absolute;
+    display: inline-flex;
+    width: 178px;
+    height: 76px;
+    padding: 22px 38px;
+    font-size: 28px; 
+    color: #ffffff;
+    background-color: rgb(14, 14, 14); 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: -120px;
+    left: 1274px;
+}
+
+.button-with-square4 .square {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(14, 14, 14); 
+}
+
+ /*멤버쉽*/
+
+.member {
+    width: 1920px;
+    height: 1169px;
+    top: 4884px;
+    left: 0px;
+    margin-top: 100px;
+}
+
+.member-text h2 {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 60px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 132px;
+    width: 500px; 
+    height: 100px; 
+}
+
+.member1-img {
+    position: absolute;
+    position: relative;
+    width: 540px; 
+    height: auto;
+    margin-top: 215px;
+    left: 128px;
+}
+
+.member4-text h2 {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 46px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 132px;
+    width: 500px; 
+    height: 100px;
+    top: 7602px;
+}
+
+.member4-text p {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 28px;
+    margin-top: 125px;
+    left: 132px;
+    width: 600px; 
+    height: 150px; 
+    top: 7607px;
+}
+
+.button-with-square5 {
+    position: absolute;
+    display: inline-flex;
+    width: 230px;
+    height: 76px;
+    padding: 22px 38px;
+    font-size: 28px; 
+    color: #ffffff;
+    background-color: rgb(14, 14, 14); 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    top: 7815px;
+    left: 132px;
+}
+
+.button-with-square5 .square {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(14, 14, 14); 
+}
+
+.member2-img {
+    position: absolute;
+    position: relative;
+    width: 540px; 
+    height: auto;
+    left: 150px;
+}
+
+.member5-text h2 {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 46px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 703px;
+    width: 500px; 
+    height: 100px;
+    top: 7602px;
+}
+
+.member5-text p {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 28px;
+    margin-top: 125px;
+    left: 703px;
+    width: 600px; 
+    height: 150px; 
+    top: 7607px;
+}
+
+.button-with-square6 {
+    position: absolute;
+    display: inline-flex;
+    width: 102px;
+    height: 33px;
+    padding: 22px 38px;
+    font-size: 28px; 
+    color: #ffffff;
+    background-color: rgb(14, 14, 14); 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    top: 0px;
+    left: 572px;
+}
+
+.button-with-square6 .square {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(14, 14, 14); 
+}
+
+.member3-img {
+    position: absolute;
+    position: relative;
+    width: 540px; 
+    height: auto;
+    margin-top: 215px;
+    left: 171px;
+}
+
+.member6-text h2 {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 46px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 1274px;
+    width: 550px; 
+    height: 100px;
+    top: 7602px;
+}
+
+.member6-text p {
+    position: absolute;
+    color: rgb(14, 14, 14); /* 텍스트 색상 */
+    font-size: 28px;
+    margin-top: 125px;
+    left: 1274px;
+    width: 600px; 
+    height: 150px;
+    top: 7607px;
+}
+
+.button-with-square7 {
+    position: absolute;
+    display: inline-flex;
+    width: 205px;
+    height: 76px;
+    padding: 22px 38px;
+    font-size: 28px; 
+    color: #ffffff;
+    background-color: rgb(14, 14, 14); 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    top: 7815px;
+    left: 1274px;
+}
+
+.button-with-square7 .square {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(14, 14, 14); 
+}
+
+/*하단*/
+
+.bottom {
+    width: 2000px;
+    height: 652px;
+    top: 6415px;
+    left: 0px;
+    margin-top: 700px;
+    background-color: rgb(14, 14, 14);
+    margin-left: -8px;
+}
+
+.bottom-text h2{
+    position: absolute;
+    color: rgb(255, 255, 255); /* 텍스트 색상 */
+    font-size: 20px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 129px;
+    width: 100px; 
+    height: 35px;
+    top: 8757px;
+}
+
+.bottom-text2 h2{
+    position: absolute;
+    color: rgb(255, 255, 255); /* 텍스트 색상 */
+    font-size: 20px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 418px;
+    width: 100px; 
+    height: 35px;
+    top: 8759px;
+}
+.bottom-text2 p{
+    position: absolute;
+    color: rgb(127, 127, 127); /* 텍스트 색상 */
+    font-size: 17px;  /* 텍스트 크기 */
+    left: 418px;
+    width: 100px; 
+    height: 35px;
+    top: 8810px;
+}
+
+.bottom-text3 h2{
+    position: absolute;
+    color: rgb(255, 255, 255); /* 텍스트 색상 */
+    font-size: 20px;  /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 두께 */
+    left: 709px;
+    width: 100px; 
+    height: 35px;
+    top: 8759px;
+}
+.bottom-text3 p{
+    position: absolute;
+    color: rgb(127, 127, 127); /* 텍스트 색상 */
+    font-size: 17px;  /* 텍스트 크기 */
+    left: 709px;
+    width: 100px; 
+    height: 35px;
+    top: 8810px;
+}
+
+.bottom-text4 p{
+    position: absolute;
+    color: rgb(127, 127, 127); /* 텍스트 색상 */
+    font-size: 17px;  /* 텍스트 크기 */
+    left: 1048px;
+    width: 100px; 
+    height: 35px;
+    top: 9092px;
+}
+
+.bottom-text4 p2{
+    position: absolute;
+    color: rgb(127, 127, 127); /* 텍스트 색상 */
+    font-size: 17px;  /* 텍스트 크기 */
+    left: 1218px;
+    width: 150px; 
+    height: 35px;
+    top: 9110px;
+}
+
+.bottom-text4 p3{
+    position: absolute;
+    color: rgb(127, 127, 127); /* 텍스트 색상 */
+    font-size: 17px;  /* 텍스트 크기 */
+    left: 1438px;
+    width: 150px; 
+    height: 35px;
+    top: 9110px;
+}
+
+.bottom-text4 p4{
+    position: absolute;
+    color: rgb(127, 127, 127); /* 텍스트 색상 */
+    font-size: 17px;  /* 텍스트 크기 */
+    left: 1688px;
+    width: 200px; 
+    height: 35px;
+    top: 9110px;
+}
+
+.bottom-text5 p{
+    position: absolute;
+    color: rgb(127, 127, 127); /* 텍스트 색상 */
+    font-size: 15px;  /* 텍스트 크기 */
+    left: 129px;
+    width: 840px; 
+    height: 35px;
+    top: 9182px;
+}
+
+.bottom-text6 p{
+    position: absolute;
+    color: rgb(127, 127, 127); /* 텍스트 색상 */
+    font-size: 15px;  /* 텍스트 크기 */
+    left: 1126px;
+    width: 840px; 
+    height: 35px;
+    top: 9182px;
+}
+
+
+.bottom-text7 p{
+    position: absolute;
+    color: rgb(127, 127, 127); /* 텍스트 색상 */
+    font-size: 15px;  /* 텍스트 크기 */
+    left: 129px;
+    width: 840px; 
+    height: 35px;
+    top: 9242px;
+}
+
+.bottom-text8 p{
+    position: absolute;
+    color: rgb(127, 127, 127); /* 텍스트 색상 */
+    font-size: 15px;  /* 텍스트 크기 */
+    left: 1126px;
+    width: 840px; 
+    height: 35px;
+    top: 9242px;
 }
